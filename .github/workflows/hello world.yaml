@@ -1,13 +1,17 @@
-name: Hello word
+name: Hello World
 
 on:
   push:
     branches:
-      main
+      - main
+
 jobs:
-  first helo world job:
-    runs on:ubuntu latest
+  first-hello-world-job:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        run: echo "hello world GA testing"
+
+      - name: Print Hello World
+        run: echo "Hello World GA testing"
+
